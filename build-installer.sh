@@ -28,7 +28,7 @@ if [ $? -ne 0 ]; then cd "$backup"; echo "Failed"; exit 1; fi
 
 # make installer
 cp -p --no-preserve=ownership -t ${arch} ./install.sh
-makeself ${arch} ./builds/${pkg_name}-${version}-${arch}.run "${app_fullname} v${version} (${arch})" ./install.sh 
+makeself ${arch} ./builds/${pkg_name}-v${version}-${arch}.run "${app_fullname} v${version} (${arch})" ./install.sh 
 
 # check for errors
 if [ $? -ne 0 ]; then cd "$backup"; echo "Failed"; exit 1; fi
